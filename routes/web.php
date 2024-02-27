@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index.index');
-});
+Route::get('/',[HomepageController::class,'index']);
 
 Route::get('/about-us',function(){
     return view('about.about-us');
