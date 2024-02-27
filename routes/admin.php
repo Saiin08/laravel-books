@@ -20,8 +20,12 @@ Route::middleware(['auth'])->group(function() {
    // route for books
    Route::get('/books',[BookController::class,'index'])->name('admin.book.index');
 
-   Route::get('/books/create',[BookController::class,'create'])->name('admin.book.create');
+   Route::get('/books/create',[BookController::class,'edit'])->name('admin.book.create');
 
+   Route::post('/books/store',[BookController::class,'store'])->name('admin.book.store');
 
+   Route::get('/books/edit/{id}',[BookController::class,'edit'])->name('admin.book.edit');
+
+   Route::put('/books/update/{id?}', [BookController::class, 'store'])->name('admin.book.update');
 });
 

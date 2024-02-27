@@ -6,6 +6,7 @@
       @foreach ($books as $book)
           <li>
             {{$book->title}}
+            <a href="{{ route('admin.book.edit', ['id' => $book->id]) }}">Edit</a>
           </li>
       @endforeach
     </ul>
