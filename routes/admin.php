@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\BookController;
 
-Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth','can:admin'])->group(function() {
 
    // route for authors
    Route::get('/authors', [AuthorController::class,  'index'])->name('admin.author.index');

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\TestController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,6 @@ Route::get('/test/array',[TestController::class,'modelResponse']);
 Route::get('/test/array',[TestController::class,'collectionResponse']);
 
 Route::get('/books/latest',[BookController::class,'latest']);
+
+// api user
+Route::get('/users',[UserController::class,'index'])->name('api.user.index');
