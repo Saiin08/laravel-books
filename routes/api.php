@@ -27,5 +27,5 @@ Route::get('/test/array',[TestController::class,'collectionResponse']);
 
 Route::get('/books/latest',[BookController::class,'latest']);
 
-// api user
+// route for user
 Route::get('/users',[UserController::class,'index'])->name('api.user.index');
