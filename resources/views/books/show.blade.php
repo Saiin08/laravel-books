@@ -41,7 +41,17 @@
     @foreach ($book->reviews as $review)
         <p>{{$review->text}}</p>
         <p>from User: {{$review->user->name}}</p>
+        
+      @auth
+        <form action="/book/{{$book->id}}/review/{{$review->id}}" method="post">
+          @csrf
+          @method('DELETE')
+          <button type="submit" onclick="return confirm('Remove this review?')">Delete</button>
+        </form>
+      @endauth
+
         <hr>
     @endforeach
+            
 
 @endsection

@@ -25,3 +25,5 @@ Route::get('/about-us',function(){
 Route::get('/book/{id}',[BookController::class,'show'])->name('book.show');
 
 Route::post('/book/{id}/review',[BookController::class,'review'])->middleware('auth')->name('book.review');
+
+Route::delete('/book/{id}/review/{review_id}',[BookController::class,'delete']);

@@ -45,6 +45,11 @@ class BookController extends Controller
 
         return redirect()->route('book.show',['id'=>$book->id]);
 
+    }
 
+    public function delete($id,$review_id) {
+        Review::findOrFail($review_id)->delete();
+        
+        return redirect()->back();
     }
 }
