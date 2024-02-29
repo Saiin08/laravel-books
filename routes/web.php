@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomepageController;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,7 @@ Route::get('/',[HomepageController::class,'index']);
 Route::get('/about-us',function(){
     return view('about.about-us');
 });
+
+Route::get('/book/{id}',[BookController::class,'show'])->name('book.show');
+
+Route::post('/book/{id}/review',[BookController::class,'review'])->middleware('auth')->name('book.review');
