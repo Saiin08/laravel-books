@@ -10,6 +10,8 @@
   @endauth
 </h1>
 
+@include('common.search')
+
 <h1>BookStore</h1>
 <p>We are the best online bookstore ever...</p>
 

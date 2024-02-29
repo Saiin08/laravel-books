@@ -29,3 +29,6 @@ Route::get('/books/latest',[BookController::class,'latest']);
 
 // route for user
 Route::get('/users',[UserController::class,'index'])->name('api.user.index');
+
+//route for search 
+Route::get('/books/search',[BookController::class,'search'])->name('api.book.search');

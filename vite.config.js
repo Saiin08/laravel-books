@@ -9,6 +9,7 @@ export default defineConfig({
                 "resources/css/app.css",
                 "resources/js/app.js",
                 "resources/js/latest-books.js",
+                "resources / js / book - search.js",
 
                 "resources/js/user-list/main.jsx",
             ],
