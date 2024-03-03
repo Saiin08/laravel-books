@@ -1,5 +1,5 @@
 @extends('layouts.main',[
-  'current_page'=>'register'
+  'current_page'=>'login'
 ])
 
 
@@ -20,9 +20,9 @@
  
     @csrf
  
-    <input type="email" name="email" value="{{ old('email') }}">
+    <input type="email" name="email" value="{{ old('email') }}" placeholder="email">
  
-    <input type="password" name="password" value="">
+    <input type="password" name="password" value="" placeholder="password">
  
     <button>Login</button>
 
