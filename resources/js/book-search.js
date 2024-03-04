@@ -10,7 +10,7 @@ search.addEventListener("input", async (event) => {
         const data = await response.json();
 
         data.forEach((book) => {
-            result.innerHTML += `<p>${book.tilte}</p>`;
+            result.innerHTML += `<p>${book.title}</p>`;
         });
     }
 });
